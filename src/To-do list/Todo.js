@@ -6,37 +6,7 @@ const List = ({ tasks, upTask, downTask, index, isComplete, finishedTask }) => {
       <span style={{ textDecoration: isComplete ? "line-Through" : "none" }}>
         {tasks}
       </span>
-      {isComplete ? (
-        <span style={{ textDecoration: "line-through" }}>{tasks}</span>
-      ) : (
-        <>
-          <button
-            className="doneButton"
-            onClick={() => {
-              finishedTask(index);
-            }}
-          >
-            Done
-          </button>
-
-          <button
-            className="move"
-            onClick={() => {
-              upTask(index);
-            }}
-          >
-            Up
-          </button>
-          <button
-            className="move"
-            onClick={() => {
-              downTask(index);
-            }}
-          >
-            Down
-          </button>
-        </>
-      )}
+      
     </div>
   );
 };

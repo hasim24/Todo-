@@ -1,5 +1,4 @@
 import React from "react";
-import List from "./Todo";
 import CompletedList from "./CompletedList";
 
 const CompletedTask = ({ deleteTask, completedTask }) => {
@@ -14,6 +13,14 @@ const CompletedTask = ({ deleteTask, completedTask }) => {
               isComplete
               deleteTask={deleteTask}
             />
+            <button
+              className="delete-button"
+              onClick={() => {
+                 deleteTask(index);
+              }}
+            >
+              Delete
+            </button>
           </li>
         );
       })}
